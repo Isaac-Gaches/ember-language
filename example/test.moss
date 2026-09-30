@@ -1,0 +1,2 @@
+let int x = 10;
+var &mut int y = x

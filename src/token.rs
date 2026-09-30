@@ -1,9 +1,15 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq,Clone)]
 pub enum Token{
     Let,
     Var,
     If,
     Else,
+    Fn,
+    
+    Arrow,
+    Mut,
+    Ampersand,
+    Type(Type),
 
     Identifier(String),
     Int(i32),
@@ -23,6 +29,16 @@ pub enum Token{
     LeftBrace,
     RightBrace,
     Semicolon,
+}
+
+#[derive(Debug, PartialEq,Clone)]
+pub enum Type{
+    Int,
+    Float,
+    Bool,
+    String,
+    Char,
+    Null,
 }
 
 
