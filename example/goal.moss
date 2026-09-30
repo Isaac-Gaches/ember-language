@@ -1,0 +1,23 @@
+let int x = 56;
+var int y = x + 678;
+var &mut int z = y;
+
+bar(&mut x);
+*z = foo(x,y);
+z = &mut x;
+*z = y;
+
+fn foo(int x,int y) -> int{
+    if x < y or x - y == 10{
+        ret x;
+    }
+    else{
+        ret y;
+    }
+}
+
+fn bar(&mut int x){
+    for int i in 0..10{
+        x++;
+    }
+}
